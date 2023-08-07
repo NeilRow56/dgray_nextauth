@@ -61,7 +61,7 @@ const AuthForm = () => {
          onSubmit={handleSubmit(onSubmit)}
          className="space-y-6"
          >
-            
+            { variant === 'REGISTER' && (
          <Input
               disabled={isLoading}
               register={register}
@@ -70,7 +70,7 @@ const AuthForm = () => {
               id='name'
               label='Name'
             />
-          
+            )}
           <Input
             disabled={isLoading}
             register={register}

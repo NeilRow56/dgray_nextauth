@@ -7,6 +7,7 @@ import {
     useForm
  } from "react-hook-form"
 import Input from "./Input"
+import Button from "./Button"
 
 
 type Variant = "LOGIN" | "REGISTER"
@@ -89,7 +90,11 @@ const AuthForm = () => {
             label='Password'
             type='password'
           />
-          
+          <div>
+            <Button disabled={isLoading} fullWidth type="submit">
+              {variant === 'LOGIN' ? 'Sign in' : 'Register'}
+            </Button>
+          </div>
         </form>
       </div>
     </div>

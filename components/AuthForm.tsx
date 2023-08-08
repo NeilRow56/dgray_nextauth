@@ -96,6 +96,28 @@ const AuthForm = () => {
             </Button>
           </div>
         </form>
+        
+        <div 
+          className="
+            flex 
+            gap-2 
+            justify-center 
+            text-sm 
+            mt-6 
+            px-2 
+            text-gray-500
+          "
+        >
+          <div className="m-4">
+            {variant === 'LOGIN' ? 'New to WPFile?' : 'Already have an account?'} 
+          </div>
+          <div 
+            onClick={toggleVariant} 
+            className="underline cursor-pointer m-4 text-sky-500 hover:text-sky-800 "
+          >
+            {variant === 'LOGIN' ? 'Create an account' : 'Login'}
+          </div>
+        </div>
       </div>
     </div>
   )
